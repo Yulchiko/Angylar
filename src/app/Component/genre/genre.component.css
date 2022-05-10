@@ -1,0 +1,14 @@
+.name{
+       font-size: 18px;
+    border: 1px solid black;
+    width: 73px;
+    height: 73px;
+    position: sticky;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0 0 10px aqua;
+    margin:0 0 10px 10px;
+    cursor: pointer;
+    text-align: center;
+}

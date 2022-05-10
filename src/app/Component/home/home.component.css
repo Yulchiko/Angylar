@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    background: aqua;
+    color: black;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.label {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.button {
+    border: 1px solid #52d5d0;
+    border-radius: 4px;
+    background: #050505;
+    color: white;
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.previous {
+    border-radius: 100px;
+    background: aqua;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    margin-top: 20px;
+}

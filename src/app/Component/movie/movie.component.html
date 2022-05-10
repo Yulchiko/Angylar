@@ -1,0 +1,12 @@
+<div class="movies">
+    <div class="movie">
+        <a routerLink="movies/{{movie.id}}">
+            <div class="element"><img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"
+                                      alt="movie" width="200" height="380">
+            </div> </a>
+            <div class="title">Name: {{movie.title}}</div>
+            <div class="info">Vote average: {{movie.vote_average}}</div>
+
+        <div *ngFor="let genre of genres">Genre: {{genre.name}}</div>
+    </div>
+</div>

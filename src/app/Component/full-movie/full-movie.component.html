@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="logo"><img
+            src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+            alt="The Movie Database (TMDB)" width="200" height="40"/></div>
+    <input class="previous" type="button" value="&lt;-- HOME" onclick="history.go(-1)">
+    <div>
+        <h4>Welcome, User!</h4>
+    </div>
+</div>
+<body>
+<button class="button" (click)="backgroundColor ()" onclick="document.body.style.background = '#b1e7b1';">Dark node
+</button>
+</body>
+<div class="full" *ngIf="movie">
+    <div class="original">
+        <h1>{{movie.original_title}}</h1>
+        <p>{{movie.overview}}</p>
+
+        <p>Release date: {{movie.release_date}}</p>
+        <p>Vote average: {{movie.vote_average}}</p>
+        <h6 *ngFor="let genre of genres">Genre: {{genre.name}}</h6>
+        <img class="backdrop" src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" alt="movie">
+    </div>
+    <div>
+        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="movie">
+    </div>
+
+</div>

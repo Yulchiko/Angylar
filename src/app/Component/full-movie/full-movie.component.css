@@ -1,0 +1,36 @@
+.full{
+    display: flex;
+    border: 1px solid black;
+    text-align: center;
+}
+.container{
+    display: flex;
+    background: aqua;
+    color: black;
+    text-decoration: none;
+    justify-content: space-between;
+}
+.label{
+    margin-top: 20px;
+}
+.button{
+    border: 1px solid black;
+    border-radius: 4px;
+    background: #413d3d;
+    color: white;
+}
+.logo{
+    margin-top: 10px;
+}
+.previous{
+    border-radius: 100px;
+    background: aqua;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.backdrop{
+   height: 450px;
+
+
+
+}
