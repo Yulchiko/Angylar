@@ -1,0 +1,6 @@
+<input [(ngModel)]="user.id" #id="ngModel" required>
+
+<input [(ngModel)]="user.name" #name="ngModel" required>
+
+<button (click)="search()" [disabled]="!id.valid && !name.valid">search</button>
+
