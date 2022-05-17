@@ -1,0 +1,6 @@
+.post{
+    border: 1px solid black;
+    box-shadow: 0 0 5px darkblue;
+    transform: translate(600px, -3650px);
+    width: 200px;
+}

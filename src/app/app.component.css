@@ -1,0 +1,13 @@
+.app{
+    display: flex;
+    justify-content: space-between;
+    background: aqua;
+    font-size: 30px;
+    text-decoration: inherit;
+    height: 50px;
+    color: black;
+}
+.app:hover{
+    color: blue;
+    cursor: pointer;
+}
