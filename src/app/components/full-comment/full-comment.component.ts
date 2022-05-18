@@ -1,8 +1,8 @@
 import { Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
-import {IComment} from "../../models/IComment";
-import { CommentService } from 'src/app/service/comment.service';
+import { CommentService } from 'src/app/service';
+import {ICommentInterface} from "../../models";
 
 @Component({
   selector: 'app-full-comment',
@@ -11,7 +11,7 @@ import { CommentService } from 'src/app/service/comment.service';
 })
 export class FullCommentComponent {
 
-  comment:IComment;
+  comment:ICommentInterface;
   constructor(private activatedRoute: ActivatedRoute, private commentService: CommentService) {
     this.activatedRoute.params.subscribe(({id})=> {
       this.commentService.getSigleComment(id).subscribe(data => this.comment = data)

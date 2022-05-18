@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from "@angular/common/http";
 
-import {UsersComponent} from "../components/users/users.component";
-import {FullUserComponent} from "../components/full-user/full-user.component";
-
+import {UsersComponent, FullUserComponent} from "../components";
 
 const routes: Routes = [
   {path: '', component: UsersComponent,

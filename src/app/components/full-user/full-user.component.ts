@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {IUser} from "../../models/IUser";
+import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
-import {UserService} from "../../service/user.service";
+import {IUserInterface} from "../../models";
+import {UserService} from "../../service";
 
 @Component({
   selector: 'app-full-user',
@@ -10,7 +10,7 @@ import {UserService} from "../../service/user.service";
   styleUrls: ['./full-user.component.css']
 })
 export class FullUserComponent {
-user:IUser;
+user:IUserInterface;
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
     this.activatedRoute.params.subscribe(({id})=>{
       this.userService.getUserById(id).subscribe(data =>this.user=data)

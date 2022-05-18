@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from "@angular/common/http";
 
-import {PostsComponent} from "../components/posts/posts.component";
-import {FullPostComponent} from "../components/full-post/full-post.component";
-
+import {PostsComponent, FullPostComponent} from "../components";
 
 const routes: Routes = [
   {path:'', component: PostsComponent,

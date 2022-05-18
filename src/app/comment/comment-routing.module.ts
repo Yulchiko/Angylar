@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {CommentsComponent} from "../components/comments/comments.component";
-import {FullCommentComponent} from "../components/full-comment/full-comment.component";
 import {HttpClientModule} from "@angular/common/http";
+
+import {CommentsComponent, FullCommentComponent} from "../components";
 
 const routes: Routes = [
   {path:'', component: CommentsComponent,

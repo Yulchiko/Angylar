@@ -1,8 +1,9 @@
 import { Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
-import {IPost} from "../../models/IPost";
-import { PostService } from 'src/app/service/post.service';
+import { PostService } from 'src/app/service';
+import {IPostInterface} from "../../models";
+
 
 @Component({
   selector: 'app-full-post',
@@ -11,7 +12,7 @@ import { PostService } from 'src/app/service/post.service';
 })
 export class FullPostComponent {
 
-  post:IPost;
+  post:IPostInterface;
   constructor(private activatedRoute: ActivatedRoute, private postService: PostService) {
     this.activatedRoute.params.subscribe(({id})=> {
       this.postService.getSiglePost(id).subscribe(data => this.post = data)

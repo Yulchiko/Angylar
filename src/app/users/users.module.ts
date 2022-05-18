@@ -2,11 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
 
-import { UsersRoutingModule } from './users-routing.module';
-import {UserComponent} from "../components/user/user.component";
-import {UsersComponent} from "../components/users/users.component";
-import {FullUserComponent} from "../components/full-user/full-user.component";
-import {UserService} from "../service/user.service";
+import { UsersRoutingModule} from './users-routing.module';
+import {UserComponent, UsersComponent,  FullUserComponent} from "../components";
+import {UserService} from "../service";
 
 
 

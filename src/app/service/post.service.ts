@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 
-import { IPost } from '../models/IPost';
+import { IPostInterface } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +14,10 @@ export class PostService {
 
 
   }
-  getPosts(): Observable<IPost[]>{
-    return this.httpClient.get<IPost[]>(this.url)
+  getPosts(): Observable<IPostInterface[]>{
+    return this.httpClient.get<IPostInterface[]>(this.url)
   }
-  getSiglePost(id: number): Observable<IPost>{
-    return this.httpClient.get<IPost>(this.url + '/' + id);
+  getSiglePost(id: number): Observable<IPostInterface>{
+    return this.httpClient.get<IPostInterface>(this.url + '/' + id);
   }
 }
