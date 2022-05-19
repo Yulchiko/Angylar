@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import {IPostInterface} from "../../models";
-import {PostService} from "../../service";
+
+import {IPostInterface} from "../../interface";
 
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
-export class PostsComponent implements OnInit {
+export class PostsComponent {
 
   posts: IPostInterface[];
-  constructor(private postService: PostService) { }
+  //constructor(private postService: PostService) {
+   // this.postService.getPosts().subscribe(value=>this.posts=value)
+  //}
+constructor(private activatedRoute: ActivatedRoute) {
+activatedRoute.data.subscribe(({Posts}) => this.posts= Posts)
+}
 
-  ngOnInit(): void {
-    this.postService.getPosts().subscribe(value=>this.posts=value)
-  }
 
 }

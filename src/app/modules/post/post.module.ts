@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PostRoutingModule } from './post-routing.module';
-import {PostComponent, PostsComponent, FullPostComponent} from "../components";
-import {PostService} from "../service";
+import {FullPostComponent, PostComponent, PostsComponent } from 'src/app/components';
+import {PostResolver, PostService, PostsResolver } from 'src/app/service';
+
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import {PostService} from "../service";
     CommonModule,
     PostRoutingModule
   ],
-  providers:[PostService]
+  providers:[PostService, PostResolver, PostsResolver]
 })
 export class PostModule { }

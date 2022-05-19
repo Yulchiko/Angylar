@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {ICommentInterface} from "../../models";
+import {ICommentInterface} from "../../interface";
 
 @Component({
   selector: 'app-comment',

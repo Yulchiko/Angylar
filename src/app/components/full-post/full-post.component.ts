@@ -2,7 +2,7 @@ import { Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 import { PostService } from 'src/app/service';
-import {IPostInterface} from "../../models";
+import {IPostInterface} from "../../interface";
 
 
 @Component({

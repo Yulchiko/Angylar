@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 
-import { ICommentInterface } from '../models';
+import { ICommentInterface } from '../interface';
 
 @Injectable({
   providedIn: 'root'

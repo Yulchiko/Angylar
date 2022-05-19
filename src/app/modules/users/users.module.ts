@@ -3,10 +3,8 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
 
 import { UsersRoutingModule} from './users-routing.module';
-import {UserComponent, UsersComponent,  FullUserComponent} from "../components";
-import {UserService} from "../service";
-
-
+import {FullUserComponent, UserComponent, UsersComponent } from 'src/app/components';
+import {UserService, UserResolver, UsersResolver} from "../../service";
 
 @NgModule({
   declarations: [
@@ -19,6 +17,6 @@ import {UserService} from "../service";
     UsersRoutingModule,
       HttpClientModule
   ],
-    providers:[UserService]
+    providers:[UserService, UserResolver, UsersResolver]
 })
 export class UsersModule { }

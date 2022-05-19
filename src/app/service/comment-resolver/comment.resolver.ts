@@ -1,0 +1,21 @@
+import { Injectable } from '@angular/core';
+import {
+  Router, Resolve,
+  RouterStateSnapshot,
+  ActivatedRouteSnapshot
+} from '@angular/router';
+import { Observable, of } from 'rxjs';
+import {ICommentInterface} from "../../interface";
+import {CommentService} from "../comment.service";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CommentResolver implements Resolve<ICommentInterface> {
+  constructor(private commentService: CommentService) {
+  }
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ICommentInterface> {
+    let {id} = route.params;
+    return this.commentService.getSigleComment(id);
+  }
+}

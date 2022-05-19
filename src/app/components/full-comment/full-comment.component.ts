@@ -2,7 +2,7 @@ import { Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 import { CommentService } from 'src/app/service';
-import {ICommentInterface} from "../../models";
+import {ICommentInterface} from "../../interface";
 
 @Component({
   selector: 'app-full-comment',

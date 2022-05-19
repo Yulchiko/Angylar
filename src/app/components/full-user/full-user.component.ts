@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
-import {IUserInterface} from "../../models";
+import {IUserInterface} from "../../interface";
 import {UserService} from "../../service";
 
 @Component({

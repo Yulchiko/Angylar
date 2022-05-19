@@ -5,9 +5,9 @@ import {HomeComponent} from "./components";
 
 let routes:Routes=[
   {path: '', component: HomeComponent},
-  {path: 'users', loadChildren:()=> import('./users/users.module').then(m=>m.UsersModule)},
-  {path:'posts', loadChildren:()=> import('./post/post.module').then(m=>m.PostModule)},
-  {path:'comments', loadChildren:()=> import('./comment/comment.module').then(m=>m.CommentModule)}
+  {path: 'users', loadChildren:()=> import('./modules/users/users.module').then(m=>m.UsersModule)},
+  {path:'posts', loadChildren:()=> import('./modules/post/post.module').then(m=>m.PostModule)},
+  {path:'comments', loadChildren:()=> import('./modules/comment/comment.module').then(m=>m.CommentModule)}
 ]
 
 

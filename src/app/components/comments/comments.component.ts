@@ -1,19 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
-import {ICommentInterface} from "../../models";
-import {CommentService} from "../../service";
+import {ICommentInterface} from "../../interface";
 
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
   styleUrls: ['./comments.component.css']
 })
-export class CommentsComponent implements OnInit {
+export class CommentsComponent{
 comments:ICommentInterface[];
-  constructor(private commentService: CommentService) { }
-
-  ngOnInit(): void {
-    this.commentService.getComment().subscribe(value=> this.comments=value)
+  constructor(private activatedRoute: ActivatedRoute) {
+    activatedRoute.data.subscribe(({Comments}) => this.comments= Comments)
   }
 
 }

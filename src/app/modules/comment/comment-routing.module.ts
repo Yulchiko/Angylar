@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from "@angular/common/http";
 
-import {CommentsComponent, FullCommentComponent} from "../components";
+import { CommentsComponent, FullCommentComponent } from 'src/app/components';
+import {CommentResolver, CommentsResolver} from "../../service";
 
 const routes: Routes = [
-  {path:'', component: CommentsComponent,
+  {path:'', component: CommentsComponent, resolve:{Comments:CommentsResolver},
   children:[
-    {path:'comments/:id', component: FullCommentComponent, canActivate:[]}
+    {path:'comments/:id', component: FullCommentComponent, canActivate:[], resolve:{Comment: CommentResolver}}
   ]}
 ];
 
