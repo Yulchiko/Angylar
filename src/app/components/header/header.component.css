@@ -1,0 +1,7 @@
+.container{
+    display: flex;
+    background: aqua;
+    color: black;
+    text-decoration: none;
+    justify-content: space-around;
+}
